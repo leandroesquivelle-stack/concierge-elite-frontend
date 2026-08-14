@@ -1,0 +1,35 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "from_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "to_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "thread_id": {
+      "type": "string"
+    },
+    "trip_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "from_email",
+    "to_email",
+    "body"
+  ]
+}

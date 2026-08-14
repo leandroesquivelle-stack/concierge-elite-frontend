@@ -1,0 +1,53 @@
+{
+  "name": "Document",
+  "type": "object",
+  "properties": {
+    "client_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "passenger_id": {
+      "type": "string"
+    },
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "passport",
+        "visa",
+        "travel_insurance",
+        "vaccination",
+        "other"
+      ]
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "expiry_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "admin_notes": {
+      "type": "string"
+    },
+    "rejection_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "client_email",
+    "document_type",
+    "file_url"
+  ]
+}

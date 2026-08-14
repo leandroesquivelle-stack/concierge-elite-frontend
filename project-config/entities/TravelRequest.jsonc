@@ -1,0 +1,62 @@
+{
+  "name": "TravelRequest",
+  "type": "object",
+  "properties": {
+    "client_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "destinations": {
+      "type": "string"
+    },
+    "travel_dates": {
+      "type": "string"
+    },
+    "num_travelers": {
+      "type": "number"
+    },
+    "budget_range": {
+      "type": "string"
+    },
+    "interests": {
+      "type": "string"
+    },
+    "special_requests": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "in_review",
+        "proposal_sent",
+        "approved",
+        "completed",
+        "cancelled"
+      ],
+      "default": "new"
+    },
+    "assigned_agent": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "high",
+        "urgent"
+      ],
+      "default": "normal"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "client_email",
+    "destinations"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "ClientProfile",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "preferred_language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "es"
+      ],
+      "default": "en"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "residence_country": {
+      "type": "string"
+    },
+    "membership_tier": {
+      "type": "string",
+      "enum": [
+        "none",
+        "premium",
+        "black",
+        "elite"
+      ],
+      "default": "none"
+    },
+    "loyalty_points": {
+      "type": "number",
+      "default": 0
+    },
+    "preferences": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email",
+    "full_name"
+  ]
+}

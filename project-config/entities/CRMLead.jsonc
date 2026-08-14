@@ -1,0 +1,62 @@
+{
+  "name": "CRMLead",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "website",
+        "referral",
+        "social",
+        "event",
+        "other"
+      ],
+      "default": "website"
+    },
+    "pipeline_stage": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "proposal",
+        "won",
+        "lost"
+      ],
+      "default": "new"
+    },
+    "assigned_agent": {
+      "type": "string"
+    },
+    "estimated_value": {
+      "type": "number"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "next_followup": {
+      "type": "string",
+      "format": "date"
+    },
+    "last_contact": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "name",
+    "email"
+  ]
+}

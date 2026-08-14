@@ -1,0 +1,41 @@
+{
+  "name": "LoyaltyAccount",
+  "type": "object",
+  "properties": {
+    "client_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "premium",
+        "black",
+        "elite"
+      ],
+      "default": "premium"
+    },
+    "total_points": {
+      "type": "number",
+      "default": 0
+    },
+    "points_earned": {
+      "type": "number",
+      "default": 0
+    },
+    "points_redeemed": {
+      "type": "number",
+      "default": 0
+    },
+    "total_spent_usd": {
+      "type": "number",
+      "default": 0
+    },
+    "ledger_json": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "client_email"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "name": "PassengerProfile",
+  "type": "object",
+  "properties": {
+    "client_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "full_legal_name": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string",
+      "format": "date"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "residence_country": {
+      "type": "string"
+    },
+    "passport_number": {
+      "type": "string"
+    },
+    "passport_issue_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "passport_expiry_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "passport_scan_url": {
+      "type": "string"
+    },
+    "visa_scan_url": {
+      "type": "string"
+    },
+    "frequent_flyer_programs": {
+      "type": "string"
+    },
+    "travel_preferences": {
+      "type": "string"
+    },
+    "dietary_requirements": {
+      "type": "string"
+    },
+    "medical_notes": {
+      "type": "string"
+    },
+    "emergency_contact_name": {
+      "type": "string"
+    },
+    "emergency_contact_phone": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "completion_percentage": {
+      "type": "number",
+      "default": 0
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "needs_update"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "client_email",
+    "full_legal_name"
+  ]
+}

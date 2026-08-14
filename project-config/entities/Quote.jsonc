@@ -1,0 +1,72 @@
+{
+  "name": "Quote",
+  "type": "object",
+  "properties": {
+    "client_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "title_es": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_es": {
+      "type": "string"
+    },
+    "items_json": {
+      "type": "string"
+    },
+    "base_cost": {
+      "type": "number",
+      "default": 0
+    },
+    "markup_percentage": {
+      "type": "number",
+      "default": 15
+    },
+    "total_price": {
+      "type": "number",
+      "default": 0
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "sent",
+        "approved",
+        "rejected",
+        "expired"
+      ],
+      "default": "draft"
+    },
+    "valid_until": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "video_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "client_email",
+    "title"
+  ]
+}

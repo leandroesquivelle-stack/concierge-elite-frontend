@@ -1,0 +1,96 @@
+{
+  "name": "Offer",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "title_es": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_es": {
+      "type": "string"
+    },
+    "destinations": {
+      "type": "string"
+    },
+    "duration_days": {
+      "type": "number"
+    },
+    "includes_flights": {
+      "type": "boolean",
+      "default": false
+    },
+    "includes_hotels": {
+      "type": "boolean",
+      "default": true
+    },
+    "includes_transfers": {
+      "type": "boolean",
+      "default": false
+    },
+    "includes_experiences": {
+      "type": "boolean",
+      "default": false
+    },
+    "base_cost": {
+      "type": "number",
+      "default": 0
+    },
+    "markup_percentage": {
+      "type": "number",
+      "default": 20
+    },
+    "final_price": {
+      "type": "number",
+      "default": 0
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "video_url": {
+      "type": "string"
+    },
+    "itinerary": {
+      "type": "string"
+    },
+    "itinerary_es": {
+      "type": "string"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "public",
+        "members",
+        "private"
+      ],
+      "default": "public"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "archived"
+      ],
+      "default": "draft"
+    },
+    "category": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

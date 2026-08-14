@@ -1,0 +1,43 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "title": {
+      "type": "string"
+    },
+    "title_es": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "message_es": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "info",
+        "action",
+        "alert",
+        "success"
+      ]
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email",
+    "title",
+    "message"
+  ]
+}

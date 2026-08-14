@@ -1,0 +1,66 @@
+{
+  "name": "Trip",
+  "type": "object",
+  "properties": {
+    "client_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "title": {
+      "type": "string"
+    },
+    "destinations": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planning",
+        "confirmed",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "default": "planning"
+    },
+    "num_travelers": {
+      "type": "number"
+    },
+    "total_cost": {
+      "type": "number"
+    },
+    "itinerary": {
+      "type": "string"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "quote_id": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "tripit_status": {
+      "type": "string",
+      "enum": [
+        "not_sent",
+        "pending",
+        "sent"
+      ],
+      "default": "not_sent"
+    }
+  },
+  "required": [
+    "client_email",
+    "title"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "KnowledgeBase",
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "visa",
+        "travel_tips",
+        "currency",
+        "health",
+        "customs",
+        "general"
+      ]
+    },
+    "country": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "title_es": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "content_es": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "is_published": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "category",
+    "title",
+    "content"
+  ]
+}
